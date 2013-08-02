@@ -1,7 +1,6 @@
 require 'redmine'
 
-require 'dispatcher'
-Dispatcher.to_prepare do
+ActionDispatch::Callbacks.to_prepare do
   # Patches
   require_dependency 'checkout/settings_controller_patch'
 
